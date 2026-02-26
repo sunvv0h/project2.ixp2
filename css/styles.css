@@ -2,12 +2,13 @@
 :root {
 	/* Colors */
 	--text: #1E2534;
-	--accent1: #FC927C;
-	--accent1-dark: #E3644A;
-	--accent2: #B9C0FC;
-	--accent2-dark: #747FD3;
-	--bg: #F1F1F8;
+	--accent1: #fedd00;
+	--accent1-dark: #ffc600;
+	--accent2: #73c0ff;
+	--accent2-dark: #1b86e3;
+	--bg: #f1f5f8;
 	--bg-light: #FFFFFF;
+	--bg-dark: #e8eef5;
 
 	/* Margins */
 	--margin-outside: 1rem;
@@ -37,6 +38,13 @@ body {
 	padding: .5rem 1.5rem;
 	background-color: var(--accent2);
 	font-weight: bold;
+}
+
+/* Hamburger Toggle */
+.show-menu .site-nav__links {
+	@media screen and (max-width: 850px) {
+		display: block;
+	}
 }
 
 /* Font Sizes */
@@ -79,7 +87,11 @@ html {
 		margin-top: 0;	
 	}
 }
+.site-nav__button:hover {
+	background-color: var(--bg-dark);
+}
 .site-nav__links {
+	display: none;
 
 	@media screen and (min-width: 850px) {
 		display: flex;
@@ -103,6 +115,10 @@ html {
 			padding-right: 1rem;
 			border-right-width: 0;
 		}
+	}
+	a:hover {
+		background-color: var(--bg-dark);
+		font-weight: bold;
 	}
 	li:first-child a{
 		border-top-left-radius: .5rem;
@@ -249,6 +265,9 @@ html {
 	border-radius: 0.5rem;
 	box-shadow: 4px 4px 16px 0px rgba(30, 37, 52, 0.10);
 }
+.card:hover {
+	background-color: var(--bg-dark);
+}
 .card__link {
 	padding: 1.5rem;
 	text-decoration: none;
@@ -288,7 +307,9 @@ html {
 	margin-bottom: var(--margin-bottom);
 	text-align: center;
 }
-
+.mailing-list a:hover {
+	background-color: var(--accent2-dark);
+}
 
 /* Footer */
 .site-footer {
